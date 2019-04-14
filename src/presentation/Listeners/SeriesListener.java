@@ -13,6 +13,7 @@ public class SeriesListener implements ActionListener {
     private SerieLayout serieLayout;
     private SerieRepository serieRepository;
 
+    //constructor
     public SeriesListener(SerieLayout serieLayout, SerieRepository serieRepository) {
         this.serieLayout = serieLayout;
         this.serieRepository = serieRepository;
@@ -20,6 +21,7 @@ public class SeriesListener implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent actionEvent) {
+        //get the data from the jcombobox
 
         JComboBox cb = (JComboBox)actionEvent.getSource();
 

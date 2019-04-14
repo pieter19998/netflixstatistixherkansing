@@ -28,6 +28,7 @@ public class EpisodeRepository {
         return list;
     }
 
+    //get single episode
     public Episode read(int id) {
         Episode episode = null;
         try

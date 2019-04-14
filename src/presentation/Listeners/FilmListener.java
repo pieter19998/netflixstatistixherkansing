@@ -14,6 +14,7 @@ public class FilmListener implements ActionListener {
     private FilmLayout filmLayout;
     private FilmRepository filmRepository;
 
+    //constructor
     public FilmListener(FilmLayout filmLayout , FilmRepository filmRepository) {
         this.filmLayout = filmLayout;
         this.filmRepository = filmRepository;
@@ -23,6 +24,7 @@ public class FilmListener implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent actionEvent) {
 
+        //get the data from the jcombobox
         JComboBox cb = (JComboBox)actionEvent.getSource();
 
         String x = String.valueOf(cb.getSelectedItem());

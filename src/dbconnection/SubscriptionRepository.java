@@ -26,6 +26,7 @@ public class SubscriptionRepository {
         return list;
     }
 
+    // get single subscription data
     public Subscription read(String email) {
         Subscription subscription = null;
         try {
@@ -52,6 +53,7 @@ public class SubscriptionRepository {
         }
     }
 
+    //delete subscription via email
     public void delete(String email) {
         try {
             System.out.println(email);
@@ -63,6 +65,7 @@ public class SubscriptionRepository {
     }
 
 
+    //get the accounts under this profile
     public int getAmountofConnectedAccounts(String email) {
         int amount = 0;
         try {

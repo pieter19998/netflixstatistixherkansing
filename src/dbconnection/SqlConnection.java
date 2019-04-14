@@ -6,6 +6,7 @@ public class SqlConnection {
 
     private Connection connection = null;
 
+    //conncect to database via driver
     public boolean connectDatabase(String connectionUrl) {
         try{
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");

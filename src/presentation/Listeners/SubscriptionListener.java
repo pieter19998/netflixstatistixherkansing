@@ -13,6 +13,7 @@ public class SubscriptionListener implements ActionListener {
     private SubscriptionRepository subscriptionRepository;
     private String action = null;
 
+    //constructor
     public SubscriptionListener(SubscriptionLayout subscriptionLayout, SubscriptionRepository subscriptionRepository , String action) {
         this.subscriptionLayout = subscriptionLayout;
         this.subscriptionRepository = subscriptionRepository;
@@ -22,6 +23,7 @@ public class SubscriptionListener implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent actionEvent) {
 
+        //check whitch button is clicked
         if (action.equals("list")) {
             JComboBox cb = (JComboBox) actionEvent.getSource();
             String x = String.valueOf(cb.getSelectedItem());
@@ -30,11 +32,13 @@ public class SubscriptionListener implements ActionListener {
         else if (action.equals("Create"))
         {
             System.out.println("CREATE");
+            //create new subscription
             subscriptionLayout.createSubscription(subscriptionRepository);
         }
 
         else if (action.equals("Delete"))
         {
+            //delete subscription
             subscriptionRepository.delete(subscriptionLayout.getMail());
         }
 

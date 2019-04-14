@@ -7,13 +7,14 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 
 public class SerieRepository {
-    
+
     private SqlConnection sqlConnection;
 
     public SerieRepository(SqlConnection sqlConnection) {
         this.sqlConnection = sqlConnection;
     }
 
+    // get all series
     public ArrayList<Serie> readAll() {
         ArrayList<Serie> list = new ArrayList<>();
         try {
@@ -27,6 +28,7 @@ public class SerieRepository {
         return list;
     }
 
+    //get single serie via name
     public Serie read(String seriename) {
         Serie Serie = null;
         try {
@@ -40,6 +42,7 @@ public class SerieRepository {
         return Serie;
     }
 
+    // get episodes in the serie
     public ArrayList<Episode> getEpisodes(int serieID) {
         ArrayList<Episode> list = new ArrayList<>();
         try {

@@ -12,6 +12,7 @@ public class FilmRepository {
         this.sqlConnection = sqlConnection;
     }
 
+    //get all films
     public ArrayList<Film> readAll() {
         ArrayList<Film> list = new ArrayList<>();
         try {
@@ -26,6 +27,7 @@ public class FilmRepository {
         return list;
     }
 
+    //get one film
     public Film read(String filmname) {
         Film film = null;
         try
