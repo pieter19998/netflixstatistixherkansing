@@ -1,8 +1,6 @@
 # netflixstatistixherkansing
 herkansing netflix statistix
 
-PHA Mourik 
-
 # installatie: SQL VIA Microsoft SQL Server Managment Studio.
 
 Open Microsoft SQL Server Managment Studio
